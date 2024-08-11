@@ -23,14 +23,14 @@ int main(int argc, char **argv) {
     int outcols = 0; // number of columns in output
 
     char *linebuf = NULL; // buffer for reading in a single line
-    char **colptrs = NULL; // array of pointers pointing to start of each col
+    char **colptrs = NULL; // array of pointers to start of each col
     int *outcols_buf = NULL; // buffer for list of output cols (1-indexed)
 
     unsigned int linecnt = 0; // number of valid lines
     unsigned int dropcnt = 0; // number of invalid (dropped) lines
-    
+
     // longest field length (does not include whitespace)
-    unsigned int longest_field = 0; 
+    unsigned int longest_field = 0;
 
     int stats_flag = 0; // was -s provided
     int c_flag = 0; // was -c provided
@@ -61,8 +61,8 @@ int main(int argc, char **argv) {
     // check if incols was provided
     // if it wasn't print INCOLS_MISSING to stderr,
     // call usage() with the first element of argv, and return failure
- 
-    
+
+
     // set outcols and check that it's at least 1
     // if no output columns are given, print MISSING_OUTCOL to stderr,
     // call usage() with the first element of argv, and return failure
@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
     */
 
     // parse the rest of argv and fill in outcols_buf
-    // make sure to check that the argument is in the correct range 
+    // make sure to check that the argument is in the correct range
     // of columns
     // if it is not, print COL_OUT_OF_RANGE to stderr and return failure
     // you can use atoi for conversion, and you can assume that all
@@ -103,11 +103,11 @@ int main(int argc, char **argv) {
     size_t buffer_len;
     char *p;
     while ((getline( /* TODO: fill in */ )) > 0) {
-        // parse the line as described in the writeup, adding null 
+        // parse the line as described in the writeup, adding null
         // terminators to separate the whitespace delimiters and filling
         // in colptrs with pointers to the start of each column as you go
-//TOO_MANY_COLS_ERR
-        
+
+
         // loop over line ( ... ) {
             // some tips/hints:
             // if you find a whitespace, find the start of the next column
@@ -116,15 +116,15 @@ int main(int argc, char **argv) {
             // it may help to keep track of how many columns you have found,
             // if there are too many, keep track of the failure and stop
             // processing this line
-            // 
+            //
             // keep track of the length of the longest field in the line,
             // it will be used for the statistics if this line is valid
         // }
-        
-        // make sure we have the right number of columns 
+
+        // make sure we have the right number of columns
         // if there were too many or too few columns, print the relevant
         // error message and go immediately to the next line
-        
+
         // use TOO_FEW_COLS_ERR for too few cols
         // use TOO_MANY_COLS_ERR for too many cols
 
@@ -140,6 +140,6 @@ int main(int argc, char **argv) {
 
     // free any allocated memory (outcols_buf, colptrs, and linebuf)
     // before returning
-    
+
     return EXIT_SUCCESS;
 }
