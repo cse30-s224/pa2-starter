@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * Assignment-2
+ * Username: _______ (fill out your username here)
+ * Class: UCSD CSE30-S224
+ */
+
+
 #define USAGE_STRING "usage: %s -c incols [-s] col1 [col2 ...]\n"
 #define INCOLS_INVALID_RANGE "Err: incols must be >= 1 and <= %d\n"
 #define INCOLS_MISSING "Err: input columns required\n"
