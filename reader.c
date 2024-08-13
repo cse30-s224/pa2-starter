@@ -75,7 +75,7 @@ int main(int argc, char **argv) {
     TODO uncomment this
     outcols_buf = malloc( TODO fill in );
     if ( TODO fill in ) {
-        fprintf(stderr, "malloc failure");
+        fprintf(stderr, "malloc failure\n");
         return EXIT_FAILURE;
     }
     */
@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
     TODO: uncomment this
     colptrs = malloc( TODO: fill in );
     if ( TODO: fill in ) {
-        fprintf(stderr, "malloc failure");
+        fprintf(stderr, "malloc failure\n");
         free(outcols_buf); // avoid memory leaks
         return EXIT_FAILURE;
     }
