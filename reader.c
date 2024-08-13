@@ -136,7 +136,7 @@ int main(int argc, char **argv) {
         // reminder: outcols_buf is 1-indexed
     }
 
-    // print stats if -s provided
+    // print stats **to stderr** if -s provided
 
     // free any allocated memory (outcols_buf, colptrs, and linebuf)
     // before returning
